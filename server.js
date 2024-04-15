@@ -10,11 +10,11 @@ dotenv.config();
 const app = express();
 
 // Set up CORS
-// Enable CORS middleware
 app.use(cors({
-    origin: 'https://joseph-x-geraldine.we-devsgh.online',
-    credentials: true // Allow credentials such as cookies or authorization headers
-  }));
+    origin: ['http://localhost:3000', 'http://127.0.0.1:3001', 'https://joseph-x-geraldine.we-devsgh.online/'],
+    credentials: true,
+    methods: ['GET', 'POST'],
+}));
 
 // Set up logging
 const logger = winston.createLogger({
