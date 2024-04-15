@@ -133,6 +133,19 @@ app.get('/dashboard', async (req, res) => {
     }
 });
 
+
+app.delete('/deleteImage', async (req, res) => {
+    const { imageUrl } = req.body;
+    try {
+        await Upload.updateOne({ $pull: { imageUrls: imageUrl } });
+        res.json({ message: 'Image deleted successfully' });
+    } catch (error) {
+        console.error('Error deleting image:', error);
+        res.status(500).json({ error: 'Error deleting image' });
+    }
+});
+
+
 app.get('/', (req, res) => {
     res.send(`
         <html>
