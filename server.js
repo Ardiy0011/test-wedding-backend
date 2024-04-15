@@ -9,11 +9,11 @@ dotenv.config();
 
 const app = express();
 
-// Set up CORS
+
 app.use(cors({
-    origin: ['https://joseph-x-geraldine.we-devsgh.online/'],
-    credentials: true,
-}));
+    origin: 'https://joseph-x-geraldine.we-devsgh.online',
+    credentials: true // Allow credentials such as cookies to be sent
+  }));
 
 // Set up logging
 const logger = winston.createLogger({
