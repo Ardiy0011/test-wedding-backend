@@ -11,7 +11,7 @@ const app = express();
 
 // Set up CORS
 app.use(cors({
-    origin: ['https://joseph-x-geraldine.we-devsgh.online/'],
+    origin: ['https://joseph-x-geraldine.we-devsgh.online/dashboard/'],
     credentials: true,
 }));
 
@@ -116,7 +116,7 @@ app.get('/imageUrls', async (req, res) => {
     }
 });
 
-// Login endpoint
+
 app.get('/dashboard', async (req, res) => {
     try {
         const allNames = await User.find({}, 'name');
