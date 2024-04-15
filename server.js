@@ -11,9 +11,8 @@ const app = express();
 
 // Set up CORS
 app.use(cors({
-    origin: ['*'],
+    origin: ['https://joseph-x-geraldine.we-devsgh.online/'],
     credentials: true,
-    methods: ['GET', 'POST'],
 }));
 
 // Set up logging
