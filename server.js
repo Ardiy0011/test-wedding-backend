@@ -11,7 +11,7 @@ const app = express();
 
 
 app.use(cors({
-    origin: 'https://joseph-x-geraldine.we-devsgh.online',
+    origin: ['https://joseph-x-geraldine.we-devsgh.online', 'https://ardiys-control.netlify.app'],
     credentials: true // Allow credentials such as cookies to be sent
   }));
 
